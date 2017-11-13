@@ -59,11 +59,7 @@ module Romaji
       # ン
       if chars[pos] == 'ン'
         next_char_romaji = KANA2ROMAJI[chars[pos + 1]]
-        if next_char_romaji && ['p', 'b', 'm'].include?(next_char_romaji[0].slice(0,1))
-          romaji += 'm'
-        else
-          romaji += 'n'
-        end
+        romaji += 'n'
         pos += 1
         next
       end

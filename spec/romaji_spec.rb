@@ -9,9 +9,11 @@ describe Romaji do
       Romaji.romaji2kana('kyoumoshinaitone').should == 'キョウモシナイトネ'
       Romaji.romaji2kana('今日もshinaitone').should == '今日モシナイトネ'
       Romaji.romaji2kana('SushiNoTabetas').should == 'スシノタベタs'
-      Romaji.romaji2kana('shimbashi').should == 'シンバシ'
+      Romaji.romaji2kana('shinbashi').should == 'シンバシ'
       Romaji.romaji2kana('kinkakuji').should == 'キンカクジ'
       Romaji.romaji2kana('tottori').should == 'トットリ'
+      Romaji.romaji2kana('syatsu').should == 'シャツ'
+      Romaji.romaji2kana('shatsu').should == 'シャツ'
       Romaji.romaji2kana('イイハナシダナー').should == 'イイハナシダナー'
     end
 
@@ -23,7 +25,7 @@ describe Romaji do
   it 'should transliterate from kana to romaji' do
     Romaji.kana2romaji('キョウモシナイトネ').should == 'kyoumoshinaitone'
     Romaji.kana2romaji('すしのたべたさ').should == 'sushinotabetasa'
-    Romaji.kana2romaji('シンバシ').should == 'shimbashi'
+    Romaji.kana2romaji('シンバシ').should == 'shinbashi'
     Romaji.kana2romaji('キンカクジ').should == 'kinkakuji'
     Romaji.kana2romaji('トットリ').should == 'tottori'
     Romaji.kana2romaji('菜っ葉').should == '菜xtsu葉'
@@ -33,6 +35,7 @@ describe Romaji do
     Romaji.kana2romaji('アツリョクナベ').should == 'atsuryokunabe'
     Romaji.kana2romaji('ウォーズ').should == 'ulo-zu'
     Romaji.kana2romaji('ぁるぁる').should == 'larularu'
+    Romaji.kana2romaji('シャツ').should == 'shatsu'
   end
   
   shared_examples_for 'String extension' do
